@@ -1,0 +1,264 @@
+@import "_style_guild.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+
+* {
+    list-style: none;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+.member-center {
+    width: 100%;
+    height: 1010px;
+    background-color: $color-LightGray;
+
+    .m-center-index {
+        font-size: 72px;
+        color: $color-White;
+    }
+
+    .list-Group {
+        .list-group-item {
+            width: 170px;
+            height: 60px;
+            background-color: $color-Footer-Background;
+            color: $color-LightGray;
+            font-size: $H7-font-size;
+            font-weight: bold;
+            letter-spacing: $font-letter-space-200;
+            border-bottom: 1px solid black;
+            outline: none;
+            z-index: 2;
+
+            &:hover {
+                background-color: $color-Footer-Background;
+                color: $color-LightGray;
+            }
+
+            &.active {
+                width: 205px;
+                background-color: $color-White;
+                color: $color-WedgwoodBlue;
+                font-weight: bold;
+                border-color: $color-SkyBlue;
+                border-right: 18px solid $color-SkyBlue;
+                margin-left: -18px;
+                z-index: 2;
+            }
+
+            &:first-child {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+
+    .tab-contents {
+        margin-left: -17px;
+
+        .member-data {
+            width: 1140px;
+            height: 100%;
+            background-color: $color-White;
+            border: 1px solid $color-Apricot;
+
+            .fa-user {
+                font-size: $H8-font-size;
+                color: $color-WedgwoodBlue;
+            }
+
+            .user-id {
+                font-size: $H10-font-size;
+                color: $color-WedgwoodBlue;
+                margin: 0px 16px;
+            }
+
+            .general-member {
+                width: 80px;
+                background-color: $color-Apricot;
+                font-size: $H9-font-size;
+                border-radius: 10px;
+            }
+
+            .User-edit {
+                color: $color-MoreButton-hover;
+
+                .fa-pen {
+                    font-size: $H7-font-size;
+                }
+
+                .user-edit {
+                    font-size: $H9-font-size;
+                }
+            }
+
+            .member-container {
+                width: 95%;
+
+                .input-data {
+                    border-bottom: 2px solid $color-MoreButton-hover;
+
+                    .label1 {
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        letter-spacing: $font-letter-space-200;
+                    }
+
+                    .input {
+                        width: 278px;
+                        font-size: 22.75px;
+                        border: none;
+                        border-bottom: 1px solid $color-WedgwoodBlue;
+                        outline: none;
+                    }
+
+                    .county,
+                    .zipcode {
+                        width: 65px;
+                        height: 32px;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
+                    }
+
+                    .district {
+                        width: 65px;
+                        height: 32px;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
+                        margin: 0px 20px;
+                    }
+
+                    .input1 {
+                        width: 235px;
+                        height: 32px;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
+                        outline: none;
+                    }
+
+                    .member-btn {
+                        button {
+                            height: 41px;
+                            border: 1px solid $color-MoreButton;
+                            font-size: 19.5px;
+                            letter-spacing: $font-letter-space-200;
+                            color: $color-IronGray;
+                            line-height: 10px;
+
+                            &:hover {
+                                background-color: $color-MoreButton-hover;
+                                color: $color-White;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .order-five {
+                font-size: 29.25px;
+                color: $color-WedgwoodBlue;
+            }
+
+            .table-container {
+                width: 90%;
+
+                .table {
+                    font-size: $H10-font-size;
+
+                    thead {
+                        background-color: $color-Footer-Background;
+                        color: $color-LightGray;
+                    }
+
+                    .orderNumber {
+                        width: 120px;
+                        background-color: $color-MoreButton;
+                        color: $color-White;
+                    }
+
+                    .checkInvoice, .returnInfor {
+                        background-color: $color-MoreButton;
+                        color: $color-White;
+                    }
+                }
+
+                .table-icon {
+                    button {
+                        background-color: $color-White;
+                        color: $color-MoreButton;
+                        border: none;
+
+                        &:hover {
+                            color: $color-Apricot;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .list-Group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table {
+        tr{
+            display: flex;
+            flex-direction: column;
+        }
+        th {
+            display: none;
+        }
+    
+        .orderNumber {
+            width: 120px;
+            margin: auto;
+        }
+    
+        .orderNumber1 {
+            background-color: black;
+            margin-top: 10vh;
+        }
+    
+        .checkInvoice, .returnInfor {
+            width: 80px;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .data-left {
+        margin-top: 50px;
+        margin-left: 25%;
+    }
+
+    .data-right {
+        margin-left: 25%;
+    }
+    
+    .address-block {
+        display: flex;
+        flex-direction: column;
+        .address {
+            margin-left: 15px;
+
+            .input1 {
+                position: absolute;
+                top: 75px;
+            }
+        }
+    }
+}
